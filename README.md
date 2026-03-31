@@ -32,136 +32,151 @@ Publish the website in the LocalHost.
 
 ## PROGRAM:
 ```
+cover.html
+
 <html>
-<head>
-    <title>Book Cover</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <title>book cover</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body >
     <div class="cover">
-        <div class="border">
-            <h3 class="top">SEC Insights</h3>
+        <div class="container">
+        <h2>About the book</h2>
+        <hr class="line">
+        <p class="description">The book <span class="high"> " Information Technology Infrastructure and it's Management."</span> is about writing clear, readable,and maintainable software. It teaches developers how to improve code quality by following best practices and avoiding common mistakes.
+        </p>
+        </div>
+        <div class="q-box">
+            <p>"Simple, neat, clear that is the basic of Information Technology."</p>
+        </div>
+        <div class="authorpic">
+            <img src="ashley.jpg" alt="Author photo" class="author-photo">
+            <div class="authordata">
+                <h4 class="authorname">ASHLEY ANTONY</h4>
+                <p class="author-bio">
+                ASHLEY ANTONY is a student and rising content creator who turns academic concepts into clear, student friendly books to support effective learning.
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            <span> SEC PUBLISHERS <br><br> Printed in INDIA</span>
+            <span>price:499/-</span>
+        </div>
+    </div>
+    </body>
+    </html>
 
-            <h1>INFORMATION TECHNOLOGY INFRASTRUCTURE<br>AND IT'S MANAGEMENT</h1>
 
-            <p class="sub>Technology is the best when it brings people together<br>BEST SELLER</p>
-
-            
-                <div class="left">
-                 <h4>SPECIAL EDITION</h4>
-                    <div class="name">
-                          <p>ASHLEY ANTONY</p>
-                    
-                         <div class="right">
-                            <img src= "ashley.jpg"alt ="Author Photo">
-                            <hr class="line">
-                            <div class>
-                                <p>SEC</p>
-                            </div>
-
-                          </div>
-                    </div>
-                </div>
+style.css
 
 body {
-    background-color: #cc00cc;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: #eee;
 }
-
 .cover {
-    width: 400px;
-    height: 550px;
-    background:url(background.png);
-    background-size:cover;
-    background-position:center; 
+    width: 420px;
+    height: 600px;
+    background: url("bg.png") no-repeat center/cover;
     position: relative;
-    text-align: center;
-    color: black;
-    font-family: 'Times New Roman',sans-serif;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border-radius: 6px;
+    overflow: hidden;
 }
-
-.border {
-    border: 4px solid green;
-    margin: 25px;
-    height: 85%;
-    padding: 15px;
-    position:relative;
+.container {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    padding: 20px 30px;
+    color: #000;
 }
-
-.top {
-    position:relative;
-    bottom:20px;
-    right:120px;
-    margin:0;
-    padding:6px 8px 6px 0;
-    display:inline-block;
-    font-size: 16px;
-    border-bottom: 1px solid black;
-    color:solid red;
+.container h2 {
+    margin-bottom: 5px;
 }
-
-h1 {
-    font-size: 24px;
-    margin-top: 30px;
-    font-weight: bold;
-}
-
-.sub {
-    font-style:italic;
-    font-size: 15px;
-    margin-top: 20px;
-}
-
-.left h4 {
-    position:relative;
-    top:150px;
-    right:70px;
-    font-size:18px;
-    font-style:unset;
-    font-weight:bold;
-    margin:0;
-}
-
-.left p {
-    position:relative;
-    top:220px;
-    right:100px;
-    font-size: 20px;
-    margin-top:5px;
-}
-
-.right img {
-    position:relative;
-    top:5px;
-    left:90px;
-    width: 130px;
-    height: 150px;
-    border: 2px solid black;
-}
-
 .line {
-    height:2px;
-    width:100%;
-    background-color:black;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    border: none;
+    margin-bottom: 15px;
 }
-
-.right p {
-    font-style:initial;
-    font-size:larger;
-    top:8px;
-    left:100px;
-    margin-top: 5px;
+.description {
+    font-size: 14px;
+    line-height: 1.6;
+}
+.high{
+    background-color: rgb(158, 255, 229);
+    width:4px;
     font-weight: bold;
 }
+.q-box{
+    background:rgba(255,255,255,0.2);
+    padding: 3px;
+    border-left: 4px solid #003366;
+    font-style:italic;
+    margin-bottom: 25px;
+    margin-top:50%;
+    margin-left:7%;
+    margin-right:7%;
+}
+.authorpic {
+    width: 325px;
+    height:100px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    margin: 40px auto;
+    font-family: "Times New Roman", serif;
+    display: flex;          /* NEW */
+    align-items: flex-start;/* NEW */
+}
+.authordata{
+    margin-bottom:50%;
+    margin left:20%;
+}
 
+.author-photo {
+    width: 80px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 20px;   
+    margin-top:1%;       
+}
+.authorname
+{
+    margin-top:-1%;
+}
+
+.author-bio {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-right:5;
+    margin-bottom : 40% ;
+    margin-top:-3%;
+}
+.footer {
+    width: 340px;
+    margin-top: 70px;
+    margin-left:26px;
+    background-color: #2b3642;
+    color:white;
+    padding: 13px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 7px;
+    font-size:10px;
+}
 
 ```
 ## OUTPUT:
-![alt text](<Screenshot (24).png>)
+
+![alt text](image.png)
 
 ## RESULT:
 The program for designing book front cover page using HTML and CSS is completed successfully.
