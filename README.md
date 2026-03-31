@@ -176,7 +176,7 @@ body {
 ```
 ## OUTPUT:
 
-![alt text](image.png)
+![alt text](<op cover.jpeg>)
 
 ## RESULT:
 The program for designing book front cover page using HTML and CSS is completed successfully.
